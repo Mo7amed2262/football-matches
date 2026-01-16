@@ -1,4 +1,4 @@
-* {
+* {* {
   box-sizing: border-box;
 }
 
@@ -20,7 +20,7 @@ body {
 #banner .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.65);
 }
 
 #banner .content {
@@ -35,10 +35,12 @@ body {
 }
 
 #banner h1 {
-  font-size: 40px;
+  font-size: 36px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
+/* البحث */
 #searchInput {
   padding: 12px 20px;
   width: 320px;
@@ -53,6 +55,7 @@ body {
   padding: 40px 0;
 }
 
+/* كرت المباراة */
 .match {
   background: white;
   width: 460px;
@@ -60,19 +63,17 @@ body {
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
 }
 
-.match:hover {
-  transform: scale(1.05);
-}
-
+/* التاريخ */
 .match-date {
   font-weight: bold;
   margin-bottom: 15px;
   font-size: 18px;
+  text-align: center;
 }
 
+/* الفرق */
 .teams {
   display: flex;
   justify-content: space-between;
@@ -81,20 +82,24 @@ body {
 
 .team {
   text-align: center;
+  width: 120px;
 }
 
 .team img {
   width: 60px;
   height: 40px;
+  object-fit: contain;
 }
 
 .team-name {
   margin-top: 5px;
   font-weight: bold;
+  font-size: 15px;
 }
 
+/* النتيجة */
 .score {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
 }
 
@@ -110,3 +115,5 @@ body {
 .team.draw .team-name {
   color: orange;
 }
+
+
