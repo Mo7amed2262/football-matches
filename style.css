@@ -1,78 +1,66 @@
-/* الخلفية العامة للصفحة */
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  background-color: #e0e0e0;
+* {
+  box-sizing: border-box;
 }
 
-/* البانر */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* ===== البانر ===== */
 #banner {
   position: relative;
-  height: 400px;
-  background-image: url('images/stadium.jpg');
+  height: 100vh;
+  background-image: url("stadium.jpg");
   background-size: cover;
   background-position: center;
-  overflow: hidden;
 }
 
-/* Overlay لتعتيم البانر */
-.banner-overlay {
-  width: 100%;
+#banner .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+#banner .content {
+  position: relative;
+  z-index: 2;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  z-index: 1;
 }
 
-.banner-overlay h1 {
-  color: white;
-  font-size: 36px;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+#banner h1 {
+  font-size: 40px;
   margin-bottom: 20px;
 }
 
-/* صندوق البحث */
 #searchInput {
-  padding: 12px;
-  width: 350px;
-  border-radius: 25px;
+  padding: 12px 20px;
+  width: 320px;
+  border-radius: 30px;
   border: none;
   font-size: 16px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  outline: none;
 }
 
-/* الكرة المتحركة */
-#ball {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 20%;
-  left: -60px; /* البداية خارج الشاشة */
-  z-index: 2;
-  animation: moveBall 8s linear infinite;
+/* ===== المباريات ===== */
+#matches {
+  padding: 40px 0;
 }
 
-@keyframes moveBall {
-  0% { left: -60px; top: 20%; }
-  50% { left: 50%; top: 10%; }
-  100% { left: 110%; top: 20%; }
-}
-
-/* كرت المباراة */
 .match {
-  background-color: white;
+  background: white;
+  width: 460px;
   margin: 20px auto;
   padding: 20px;
-  width: 450px;
   border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-  transition: transform 0.2s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
 }
 
 .match:hover {
@@ -82,7 +70,6 @@ body {
 .match-date {
   font-weight: bold;
   margin-bottom: 15px;
-  color: #333;
   font-size: 18px;
 }
 
@@ -93,29 +80,25 @@ body {
 }
 
 .team {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
-.logo {
+.team img {
   width: 60px;
-  height: 60px;
-  margin-bottom: 8px;
+  height: 40px;
 }
 
 .team-name {
+  margin-top: 5px;
   font-weight: bold;
-  font-size: 16px;
 }
 
 .score {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
-  color: #1a73e8;
 }
 
-/* ألوان الفريق الفائز والخاسر */
+/* ألوان النتيجة */
 .team.win .team-name {
   color: green;
 }
