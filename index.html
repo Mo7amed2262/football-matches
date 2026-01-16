@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>مواعيد ونتائج مباريات كرة القدم</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- بانر كامل مع Overlay -->
+  <div id="banner">
+    <div class="banner-overlay">
+      <h1>مواعيد ونتائج مباريات كرة القدم</h1>
+      <input type="text" id="searchInput" placeholder="اكتب اسم الفريق للبحث..." onkeyup="filterMatches()">
+    </div>
+    <!-- كرة تتحرك على البانر -->
+    <img src="images/ball.png" id="ball" alt="كرة">
+  </div>
+
+  <!-- المكان اللي هنعرض فيه المباريات -->
+  <div id="matches"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
