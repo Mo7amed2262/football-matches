@@ -6,19 +6,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- بانر كامل مع Overlay -->
-  <div id="banner">
-    <div class="banner-overlay">
+
+  <!-- البانر -->
+  <section id="banner">
+    <div class="overlay"></div>
+    <div class="content">
       <h1>مواعيد ونتائج مباريات كرة القدم</h1>
-      <input type="text" id="searchInput" placeholder="اكتب اسم الفريق للبحث..." onkeyup="filterMatches()">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="اكتب اسم الفريق للبحث..."
+        onkeyup="filterMatches()"
+      >
     </div>
-    <!-- كرة تتحرك على البانر -->
-    <img src="images/ball.png" id="ball" alt="كرة">
-  </div>
+  </section>
 
-  <!-- المكان اللي هنعرض فيه المباريات -->
-  <div id="matches"></div>
+  <!-- المباريات -->
+  <section id="matches"></section>
 
-  <script src="script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
